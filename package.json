@@ -1,0 +1,15 @@
+{
+  "name": "multibag",
+  "version": "1.0.0",
+  "description": "MULTIBAG static site. Output lives in dist/.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "sharp": "^0.34.0"
+  }
+}

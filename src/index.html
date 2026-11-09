@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MULTIBAG | Elysium market board</title>
+<meta name="description" content="A single dark surface for Elysium pool flow, with a slot reserved for the MULTIBAG token as soon as its address is published.">
+<meta name="theme-color" content="#0a0a0a">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:title" content="MULTIBAG">
+<meta property="og:description" content="Many bags. One board. Live Elysium pool flow.">
+<meta property="og:image" content="https://multibag.trade/assets/og.png">
+<meta property="og:url" content="https://multibag.trade/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fragment+Mono&family=Host+Grotesk:wght@300..800&display=swap">
+<link rel="stylesheet" href="/styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<a class="skip-link" href="#main">Jump to main</a>
+
+<div class="top" id="top">
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MULTIBAG home">
+      <img src="/assets/logo-96.png" width="32" height="32" alt="" decoding="async">
+      <span>MULTIBAG</span>
+    </a>
+    <nav class="socials" aria-label="Social links">
+      <a class="icon-link" id="socialX" aria-label="MULTIBAG on X" rel="noopener noreferrer" target="_blank">
+        <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a class="icon-link" id="socialGh" aria-label="MULTIBAG on GitHub" rel="noopener noreferrer" target="_blank">
+        <svg viewBox="0 0 16 16" width="20" height="20" aria-hidden="true" focusable="false"><path fill="currentColor" d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg>
+      </a>
+    </nav>
+  </header>
+  <div class="ca" id="ca" data-state="absent">
+    <span class="ca__label">CA</span>
+    <button type="button" class="ca__value" id="caBtn" aria-disabled="true"><span id="caText">Not announced yet</span></button>
+    <span class="ca__fb" id="caFb" role="status" aria-live="polite"></span>
+  </div>
+</div>
+
+<main id="main" tabindex="-1">
+  <section class="hero" id="hero" aria-labelledby="hero-title" style="--dx:.046;--dy:.046">
+    <div class="hero__bg" aria-hidden="true">
+      <i class="mesh mesh--a" data-depth="0.18"></i>
+      <i class="mesh mesh--b" data-depth="0.32"></i>
+      <i class="mesh mesh--c" data-depth="0.12"></i>
+      <i class="dots" data-depth="0.06"></i>
+    </div>
+    <div class="shell hero__in">
+      <div class="hero__stage">
+        <span class="frame" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        <span class="axis" id="axis" aria-hidden="true">Axis 0.00 0.00</span>
+        <p class="pill rise" style="--d:0ms"><span class="live-dot" aria-hidden="true"></span><span id="pillText">Connecting</span></p>
+        <h1 class="hero__title" id="hero-title">
+          <span class="rise" data-t="Many bags." style="--d:60ms">Many bags.</span>
+          <span class="rise" data-t="One board." style="--d:140ms">One board.</span>
+        </h1>
+      </div>
+      <div class="intake rise" style="--d:260ms">
+        <p class="lede">A single dark surface for Elysium pool flow. Prices, depth and turnover refresh on their own, and our token takes the first seat as soon as its address is published.</p>
+        <div class="cta">
+          <a class="btn btn--primary btn--lg" href="#board">Open the board</a>
+          <a class="btn btn--secondary btn--lg" id="ctaX" rel="noopener noreferrer" target="_blank">Follow on X</a>
+        </div>
+        <p class="fine">Figures come from third-party feeds and can lag or fail. Nothing here is financial advice.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="shell tiles reveal" aria-label="Board totals">
+    <article class="tile spot"><p class="tile__k">Pools tracked</p><p class="tile__v" data-tile="pools">—</p></article>
+    <article class="tile spot"><p class="tile__k">Turnover, 24h</p><p class="tile__v" data-tile="vol">—</p></article>
+    <article class="tile spot"><p class="tile__k">Pooled depth</p><p class="tile__v" data-tile="liq">—</p></article>
+    <article class="tile spot"><p class="tile__k">Strongest mover</p><p class="tile__v" data-tile="top">—</p></article>
+  </section>
+
+  <section class="ticker reveal" aria-label="Live ticker">
+    <div class="ticker__track" id="ticker"></div>
+  </section>
+
+  <section class="shell board-sec" id="board" aria-labelledby="board-h">
+    <div class="sec-head reveal">
+      <div>
+        <h2 id="board-h">Market board</h2>
+        <p class="muted">Ten seats. Seat one is reserved for our token; the other nine follow turnover across Elysium pools.</p>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Board order">
+        <button type="button" role="tab" id="tab-vol" aria-selected="true" aria-controls="boardList" data-sort="vol">Turnover</button>
+        <button type="button" role="tab" id="tab-chg" aria-selected="false" aria-controls="boardList" data-sort="chg" tabindex="-1">Momentum</button>
+        <button type="button" role="tab" id="tab-liq" aria-selected="false" aria-controls="boardList" data-sort="liq" tabindex="-1">Depth</button>
+      </div>
+    </div>
+    <div class="panel board reveal" data-state="loading">
+      <div class="row row--head" aria-hidden="true">
+        <span>#</span><span>Token</span><span class="num">Price</span><span class="num">24h</span><span class="num">Volume</span><span class="num">Liquidity</span><span></span>
+      </div>
+      <ol class="rows" id="boardList" role="tabpanel" aria-labelledby="tab-vol"></ol>
+      <p class="board__msg" id="boardMsg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="shell cards-sec" aria-labelledby="how-h">
+    <div class="sec-head reveal"><h2 id="how-h">How the page behaves</h2></div>
+    <div class="cards">
+      <article class="card spot reveal" style="--d:0ms">
+        <span class="card__n">01</span>
+        <h3>Feed first</h3>
+        <p class="muted">Every figure above comes from a public aggregator feed. Nothing on the board is typed in by hand.</p>
+      </article>
+      <article class="card spot reveal" style="--d:90ms">
+        <span class="card__n">02</span>
+        <h3>Address gated</h3>
+        <p class="muted">Seat one stays quiet until a contract address is announced, then wakes from a single record and starts reading its own pair.</p>
+      </article>
+      <article class="card spot reveal" style="--d:180ms">
+        <span class="card__n">03</span>
+        <h3>Quiet motion</h3>
+        <p class="muted">Numbers glide, rows settle, and all movement steps aside when your system asks for less of it.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="shell chain-sec" aria-labelledby="chain-h">
+    <div class="panel chain spot reveal">
+      <div class="chain__head">
+        <h2 id="chain-h">Elysium network</h2>
+        <button type="button" class="btn btn--secondary" id="addChain">Add to wallet</button>
+      </div>
+      <dl class="kv">
+        <div><dt>Chain ID</dt><dd><span id="kvId"></span><button type="button" class="copy" id="kvIdCopy" aria-label="Copy chain ID"></button></dd></div>
+        <div><dt>Currency</dt><dd id="kvCur"></dd></div>
+        <div><dt>RPC</dt><dd><span id="kvRpc"></span><button type="button" class="copy" id="kvRpcCopy" aria-label="Copy RPC address"></button></dd></div>
+        <div><dt>Explorer</dt><dd><a id="kvExp" rel="noopener noreferrer" target="_blank"></a></dd></div>
+      </dl>
+      <p class="board__msg" id="chainMsg" role="status" aria-live="polite"></p>
+    </div>
+  </section>
+
+  <section class="shell closing reveal" aria-labelledby="close-h">
+    <h2 id="close-h">Keep one eye on the board.</h2>
+    <a class="btn btn--primary btn--lg" id="closeX" rel="noopener noreferrer" target="_blank">Follow on X</a>
+  </section>
+</main>
+
+<footer class="shell site-footer">
+  <span>MULTIBAG</span>
+  <span id="footDomain"></span>
+  <span class="muted">Chain 99901</span>
+</footer>
+
+<script type="module" src="/app.js"></script>
+</body>
+</html>
